@@ -56,11 +56,11 @@ const checkPlaying = song => {
   if (song.paused) {
     song.play();
     video.play();
-    play.src = "./svg/pause.svg";
+    play.src = "./pause.svg";
   } else {
     song.pause();
     video.pause();
-    play.src = "./svg/play.svg";
+    play.src = "./play.svg";
   }
 };
 
@@ -76,7 +76,7 @@ song.ontimeupdate = function() {
   if (currentTime >= fakeDuration) {
     song.pause();
     song.currentTime = 0;
-    play.src = "./svg/play.svg";
+    play.src = "./play.svg";
     video.pause();
   }
 };
